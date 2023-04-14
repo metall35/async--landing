@@ -1,4 +1,4 @@
-const API = "https://spotify23.p.rapidapi.com/artist_singles/?id=2LRoIwlKmHjgvigdNGBHNo&offset=0&limit=11"
+const API = "https://spotify23.p.rapidapi.com/artist_singles/?id=2LRoIwlKmHjgvigdNGBHNo&offset=0&limit=10"
 const content = null || document.getElementById("canciones-ferxxo")
 const options = {
     method: 'GET',
@@ -16,7 +16,7 @@ async function fetchData(urlAPI) {
 (async () => {
     try {
         const cancion = await fetchData(API)
-        console.log(cancion.data.artist.discography.singles.items[0].releases.items[0]);
+        // console.log(cancion.data.artist.discography.singles.items[0].releases.items[0]);
         let view = `
             ${cancion.data.artist.discography.singles.items.map(musica => `
             <a href="${musica.releases.items[0].sharingInfo.shareUrl}">
@@ -32,7 +32,7 @@ async function fetchData(urlAPI) {
                     </div>
                 </div>
             </a>
-            `).slice(0, 10).join('')}
+            `).join('')}
         `
         content.innerHTML = view
     } catch (error) {
