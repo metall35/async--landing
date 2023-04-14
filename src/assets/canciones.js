@@ -1,11 +1,11 @@
 const API = "https://spotify23.p.rapidapi.com/artist_singles/?id=2LRoIwlKmHjgvigdNGBHNo&offset=0&limit=10"
 const content = null || document.getElementById("canciones-ferxxo")
 const options = {
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Key': 'b390c2c42emsha0691cffe81cf71p1fef12jsnd25f4ff9d644',
-        'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
-    }
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'a21d9d4b54msh528b269af28748ep19b105jsn8ac0a4e6217a',
+		'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
+	}
 };
 async function fetchData(urlAPI) {
     const response = await fetch(urlAPI, options)
